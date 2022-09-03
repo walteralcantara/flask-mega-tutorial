@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Error - 404</title>
-  </head>
-  <body>
-    {% extends "base.html" %}
+{% extends "base.html" %}
 
-    {% block app_content %}
-      <h1>An unexpected error has occurred</h1>
-      <p>The administrator has been notified. Sorry for the inconvenience!</p>
-      <p><a href="{{ url_for('index') }}">Back</a></p>
-    {% endblock %}
-  </body>
-</html>
+{% block app_content %}
+    <h1>{{ _('An unexpected error has occurred') }}</h1>
+    <p>{{ _('The administrator has been notified. Sorry for the inconvenience!') }}</p>
+    <p><a href="{{ url_for('index') }}">{{ _('Back') }}</a></p>
+{% endblock %}
